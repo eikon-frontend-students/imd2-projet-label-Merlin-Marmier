@@ -1,7 +1,12 @@
+@font-face {
+  font-family: RextonBlack;
+  src: url(../font/rexton-black.woff2);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
+  font-family: coustard;
 }
 
 a {
@@ -11,4 +16,164 @@ a {
 img,
 video {
   display: block;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding: 24px 98px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.About {
+  display: flex;
+  flex-direction: column;
+  padding: 96px 97px 102px;
+  gap: 24px;
+}
+.Artists {
+  display: flex;
+  flex-direction: column;
+  padding: 96px 97px;
+  gap: 24px;
+  background-color: black;
+  color: white;
+}
+
+.card {
+  display: flex;
+  align-items: end;
+  aspect-ratio: 1/1;
+  background-color: blue;
+  padding: 24px 34px;
+}
+
+.card h2 {
+}
+
+.artists-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  background-color: rgb(255, 0, 251);
+  align-self: center;
+  padding: 8px 13px;
+  margin-top: 24;
+  gap: 10px;
+}
+
+.outlined {
+  background: none;
+  border: solid 2px #cb48ff;
+  color: #cb48ff;
+}
+
+.News {
+  display: flex;
+  flex-direction: column;
+  padding: 97px 96px;
+  gap: 24px;
+}
+.news-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.news-card {
+  display: flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: start;
+  gap: 25px;
+  background-color: black;
+  color: white;
+}
+
+.news-card img {
+  width: 236px;
+  height: 160px;
+  background-color: white;
+}
+
+.new-card .label {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  justify-content: space-between;
+}
+
+.Shop {
+  padding: 97px;
+  background-color: black;
+  color: white;
+}
+.shop-carrousel {
+  display: flex;
+  align-items: center;
+  gap: 33px;
+  align-self: stretch;
+  overflow: hidden;
+  margin-top: 24px;
+}
+.shop-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #333333;
+  padding: 0px 44px 29px 44px;
+  gap: 20px;
+}
+
+.shop-card .label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+h6 {
+  font-size: 80px;
+}
+
+.label .more {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.more .button {
+  margin-top: 0px;
+}
+
+.arrows {
+  display: flex;
+  justify-content: center;
+  gap: 62px;
+  margin-top: 48px;
+}
+
+#right {
+  transform: rotate(180deg);
+}
+
+h2 {
+  font-family: RextonBlack;
 }
