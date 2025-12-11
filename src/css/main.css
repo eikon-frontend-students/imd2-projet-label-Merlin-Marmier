@@ -18,6 +18,15 @@ video {
   display: block;
 }
 
+/* Option B — cacher la barre mais garder le scroll */
+html::-webkit-scrollbar {
+  display: none;
+}
+body {
+  -ms-overflow-style: none; /* IE 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -35,9 +44,10 @@ nav {
 }
 
 .About {
+  position: relative; /* déjà présent — nécessaire pour le positionnement absolu */
   display: flex;
   flex-direction: column;
-  padding: 96px 97px 102px;
+  padding: 96px 97px 200px;
   gap: 24px;
 }
 .Artists {
@@ -174,6 +184,181 @@ h6 {
   transform: rotate(180deg);
 }
 
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 96px 0px;
+  gap: 64px;
+}
+
+.footercontent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  width: auto;
+}
+
+#facebook {
+  scale: 150%;
+}
+
+#youtube {
+  scale: 125%;
+}
+
+#instagram {
+  scale: 140%;
+}
+
+.copyrights {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+
+#logo-footer {
+  width: 75px;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: black;
+  padding-bottom: 31px;
+  background-image: url(../img/background-hero.svg);
+  background-size: cover;
+  background-position: center 30px;
+}
+
+.carrousel-2 {
+  width: 80px;
+  height: 479px;
+  background-color: rgb(117, 38, 85);
+}
+
+.carrousel-3 {
+  width: 80px;
+  height: 479px;
+  background-color: rgb(117, 38, 85);
+}
+
+.carrousel-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../img/Hero.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  padding: 68px 159px;
+  color: white;
+  gap: 150px;
+  padding: 50px;
+  min-height: 600px; /* <-- fixe une hauteur minimale */
+}
+
+.title {
+  position: relative;
+}
+
+.title h1 {
+  transform: translateY(-10px);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 43px;
+}
+
+.subtitle {
+  display: flex;
+  flex-direction: column;
+  margin-right: 500px;
+  gap: 13px;
+}
+
+.subtitle .button {
+  margin: 0;
+  align-self: flex-start;
+}
+
+svg {
+  position: absolute;
+  inset: -17;
+  display: flex;
+}
+
+#arrow-left {
+  transform: rotate(180deg);
+}
+
+#fleur-about {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(30%, -50%) scale(0.8);
+  width: clamp(160px, 30vw, 480px);
+  max-width: 70%;
+  height: auto;
+  z-index: 10;
+  pointer-events: none;
+}
+
+@media (max-height: 600px) {
+  #fleur-about {
+    top: 40%;
+    width: clamp(140px, 36vw, 360px);
+  }
+}
+
+@media (max-width: 600px) {
+  #fleur-about {
+    top: 40%;
+    width: clamp(120px, 40vw, 240px);
+  }
+}
+
+h1 {
+  font-family: RextonBlack;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%;
+  letter-spacing: -14px;
+  width: 950px;
+}
+
 h2 {
   font-family: RextonBlack;
+}
+
+h3 {
+  font-family: RextonBlack;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 125%;
+  letter-spacing: -3.52px;
+}
+
+p {
+  color: var(--black-black-100, #000);
+  font-family: Coustard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.2px;
 }
