@@ -3,6 +3,10 @@
   src: url(../font/rexton-black.woff2);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -25,6 +29,7 @@ html::-webkit-scrollbar {
 body {
   -ms-overflow-style: none; /* IE 10+ */
   scrollbar-width: none; /* Firefox */
+  list-style: none;
 }
 
 header {
@@ -40,11 +45,43 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.menu {
+  border-bottom: solid 2px;
+  padding: 0px 20px;
+}
+
+.right {
+  padding-right: 0px;
+}
+
+.left {
+  padding-left: 0px;
+}
+
+.menu-hover {
+  padding: 10px 5px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.menu-hover:hover {
+  background-color: white;
+  color: black;
+}
+
+.menu-hover:hover a {
+  color: black;
 }
 
 .About {
-  position: relative; /* déjà présent — nécessaire pour le positionnement absolu */
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 96px 97px 200px;
@@ -342,6 +379,12 @@ h1 {
 
 h2 {
   font-family: RextonBlack;
+  color: #fff;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 125%; /* 45px */
+  letter-spacing: -7.92px;
 }
 
 h3 {
@@ -361,4 +404,216 @@ p {
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.2px;
+}
+
+.banner {
+  background-image: url(../img/Bria-salmena.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 643px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.banner h1 {
+  width: 500px;
+  color: white;
+}
+
+.infos {
+  display: flex;
+  flex-direction: column;
+  padding: 72px 100px 102px;
+  gap: 24px;
+}
+
+.Discography {
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  color: white;
+  padding: 96px 97px;
+  gap: 24px;
+}
+
+.albums {
+  display: flex;
+  justify-content: center;
+}
+
+.albums img {
+  box-shadow: -10px -3px 13.1px 0 rgba(0, 0, 0, 0.63);
+}
+
+.current-album {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  width: 550px;
+  gap: 24px;
+}
+
+.description p {
+  color: white;
+}
+
+.album-title {
+  display: flex;
+  align-items: end;
+  gap: 46px;
+}
+
+.album-picture {
+  display: flex;
+  justify-content: center;
+  padding-left: 20px;
+  background-image: url(../img/album-4.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 278px;
+  height: 278px;
+}
+
+.album-picture img {
+  scale: 30%;
+}
+
+.shows {
+  padding: 96px 94px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.carrousel-shows {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  height: 361px;
+  gap: 40;
+}
+
+.show-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 42px;
+}
+
+.show-date h2 {
+  color: #000;
+}
+
+.show-title p {
+  font-size: 24px;
+}
+
+.show-date p {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 158%;
+  letter-spacing: -0.16px;
+}
+
+.show-date .button {
+  margin-top: 0px;
+}
+
+#current-date {
+  align-self: center;
+}
+
+.hidden-date {
+  opacity: 0.38;
+}
+
+.patern {
+  height: 169px;
+}
+
+.patern-flower {
+  background-image: url(../img/fleur-2.svg);
+  width: 100000;
+  background-size: contain;
+}
+
+.Pictures {
+  display: flex;
+  flex-direction: column;
+  padding: 96px;
+  gap: 24px;
+}
+
+.carrousel-pictures {
+  display: flex;
+  gap: 48px;
+  overflow: hidden;
+}
+
+.Pictures img {
+  height: 430;
+}
+
+.black {
+  background-color: #000;
+  height: 250px;
+}
+
+.social-media-large {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 96;
+  background-color: #000;
+}
+
+.social-media-large img {
+  scale: 65%;
+}
+
+.instagram p {
+  color: white;
+  font-size: 36px;
+  line-height: 158%;
+  letter-spacing: -0.36px;
+}
+
+.youtube p {
+  color: white;
+  font-size: 36px;
+  line-height: 158%;
+  letter-spacing: -0.36px;
+}
+
+.facebook p {
+  color: white;
+  font-size: 36px;
+  line-height: 158%;
+  letter-spacing: -0.36px;
+}
+
+.instagram {
+  display: flex;
+  flex-direction: column;
+  gap: 24;
+}
+
+.youtube {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.facebook {
+  display: flex;
+  flex-direction: column;
+  gap: 24;
 }
