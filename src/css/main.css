@@ -39,6 +39,9 @@ header {
   background-color: black;
   color: white;
   padding: 24px 98px;
+  position: sticky;
+  top: 0px;
+  z-index: 999;
 }
 
 nav {
@@ -116,18 +119,51 @@ nav a {
 .button {
   display: flex;
   align-items: center;
+  justify-content: center;
   text-decoration: none;
+  height: fit-content;
+  width: fit-content;
   background-color: rgb(255, 0, 251);
   align-self: center;
   padding: 8px 13px;
   margin-top: 24;
-  gap: 10px;
+  gap: 15px;
 }
 
 .outlined {
   background: none;
   border: solid 2px #cb48ff;
   color: #cb48ff;
+}
+
+.filled-white {
+  background-color: white;
+  color: #000;
+}
+
+.filled-white:hover {
+  background-color: #000;
+  color: white;
+}
+
+.outlined:hover {
+  background-color: #cb48ff;
+  color: white;
+}
+
+.filled-black:hover {
+  background-color: white;
+  color: #000;
+  border: solid black;
+}
+
+.filled-black {
+  background-color: #000;
+  color: white;
+}
+
+.button img {
+  height: 25px;
 }
 
 .News {
@@ -157,13 +193,22 @@ nav a {
   background-color: white;
 }
 
-.new-card .label {
+.news-card .label {
   display: flex;
-  height: 100%;
   flex-direction: column;
+  height: 100%;
   align-items: flex-start;
-  gap: 14px;
-  justify-content: space-between;
+  gap: 10px;
+}
+
+.label h2 {
+  font-size: 32px;
+}
+
+.label p {
+  color: white;
+  font-size: 16px;
+  line-height: 126%; /* 20.16px */
 }
 
 .Shop {
@@ -193,10 +238,6 @@ nav a {
   align-items: center;
   justify-content: center;
   gap: 60px;
-}
-
-h6 {
-  font-size: 80px;
 }
 
 .label .more {
@@ -282,12 +323,14 @@ footer {
   width: 80px;
   height: 479px;
   background-color: rgb(117, 38, 85);
+  background-image: url(../img/hero\ 3.jpg);
 }
 
 .carrousel-3 {
   width: 80px;
   height: 479px;
   background-color: rgb(117, 38, 85);
+  background-image: url(../img/hero\ 1.jpg);
 }
 
 .carrousel-1 {
@@ -295,6 +338,7 @@ footer {
   align-items: center;
   justify-content: center;
   background-image: url(../img/Hero.png);
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   overflow: hidden;
@@ -302,7 +346,7 @@ footer {
   color: white;
   gap: 150px;
   padding: 50px;
-  min-height: 600px; /* <-- fixe une hauteur minimale */
+  min-height: 600px;
 }
 
 .title {
@@ -316,7 +360,11 @@ footer {
 .content {
   display: flex;
   flex-direction: column;
-  gap: 43px;
+  gap: 30px;
+}
+
+.subtitle p {
+  color: white;
 }
 
 .subtitle {
@@ -353,6 +401,17 @@ svg {
   pointer-events: none;
 }
 
+.subtitle {
+  width: 70%;
+}
+
+.subtitle p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 125%;
+  text-transform: uppercase;
+}
+
 @media (max-height: 600px) {
   #fleur-about {
     top: 40%;
@@ -383,14 +442,22 @@ h2 {
   font-size: 36px;
   font-style: normal;
   font-weight: 500;
-  line-height: 125%; /* 45px */
+  line-height: 125%;
   letter-spacing: -7.92px;
+  text-decoration: none;
 }
 
 h3 {
   font-family: RextonBlack;
   font-size: 16px;
   font-style: normal;
+  font-weight: 500;
+  line-height: 125%;
+  letter-spacing: -3.52px;
+}
+
+h4 {
+  font-family: RextonBlack;
   font-weight: 500;
   line-height: 125%;
   letter-spacing: -3.52px;
@@ -616,4 +683,120 @@ p {
   display: flex;
   flex-direction: column;
   gap: 24;
+}
+
+#artist-1 {
+  background-image: url(../img/artist-1.jpg);
+  background-size: cover;
+}
+
+#artist-2 {
+  background-image: url(../img/artist-2.jpg);
+  background-size: cover;
+}
+#artist-3 {
+  background-image: url(../img/artist-3.jpg);
+  background-size: cover;
+}
+#artist-4 {
+  background-image: url(../img/artist-4.jpg);
+  background-size: cover;
+}
+#artist-5 {
+  background-image: url(../img/artist-5.jpg);
+  background-size: cover;
+}
+
+#artist-6 {
+  background-image: url(../img/artist-6.jpg);
+  background-size: cover;
+}
+#artist-7 {
+  background-image: url(../img/artist-7.jpg);
+  background-size: cover;
+}
+#artist-8 {
+  background-image: url(../img/artist-8.jpg);
+  background-size: cover;
+}
+#artist-9 {
+  background-image: url(../img/artist-9.jpg);
+  background-size: cover;
+}
+
+.card h2 {
+  font-size: 30px;
+}
+
+#price-2 {
+  transform: rotate(20deg);
+}
+
+@media (max-width: 1300) {
+  .news-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .artists-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .carrousel-shows {
+    flex-direction: column;
+  }
+
+  .show-date button {
+    margin-top: 300px;
+  }
+}
+
+@media (max-width: 800) {
+  .artists-grid {
+    grid-template-columns: 1fr;
+  }
+
+  header img {
+    width: 75px;
+  }
+
+  header {
+    flex-direction: column;
+  }
+
+  .current-album {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600) {
+  .news-card img {
+    width: 200px;
+    height: auto;
+  }
+
+  .news-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-media-large {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500) {
+  .Artists {
+    padding: 30px;
+  }
+  .About {
+    padding: 30px;
+  }
+  .news-grid {
+    padding: 30px;
+  }
+  .menu {
+    padding: 0;
+  }
 }
